@@ -1,0 +1,20 @@
+{
+  "name": "quickprint",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["workers", "pages"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:worker\" \"npm run dev:pages\"",
+    "dev:worker": "cd workers && wrangler dev",
+    "dev:pages": "cd pages && wrangler pages dev dist --port 5173",
+    "build": "cd pages && npm run build",
+    "deploy:worker": "cd workers && wrangler deploy",
+    "deploy:pages": "cd pages && npm run build && wrangler pages deploy dist",
+    "db:migrate": "cd workers && wrangler d1 migrations apply quickprint-db",
+    "db:migrate:local": "cd workers && wrangler d1 migrations apply quickprint-db --local",
+    "db:seed": "cd workers && wrangler d1 execute quickprint-db --file=../migrations/seed.sql"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

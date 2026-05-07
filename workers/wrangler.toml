@@ -1,0 +1,22 @@
+name = "quickprint-api"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+RAZORPAY_KEY_ID = "rzp_test_YOUR_KEY_ID"
+ENVIRONMENT = "production"
+CORS_ORIGIN = "https://quickprint.pages.dev"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "quickprint-db"
+database_id = "YOUR_D1_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "quickprint-files"
+
+[[migrations]]
+database = "quickprint-db"
+migrations_dir = "../migrations"

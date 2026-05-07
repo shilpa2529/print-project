@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickPrint — Doorstep Printing</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖨️</text></svg>" />
+  <link rel="stylesheet" href="./shared/base.css" />
+  <link rel="stylesheet" href="./customer/customer.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <div class="app-loading">
+      <div class="loading-logo">🖨️</div>
+      <div class="spinner" style="border-color:#4f46e520;border-top-color:#4f46e5;width:32px;height:32px;border-width:3px;"></div>
+    </div>
+  </div>
+  <script type="module" src="./customer/main.js"></script>
+</body>
+</html>

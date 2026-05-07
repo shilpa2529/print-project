@@ -1,0 +1,1 @@
+export { renderAdminSettings } from './payments.js';

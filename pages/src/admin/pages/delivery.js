@@ -1,0 +1,1 @@
+export { renderAdminDelivery } from './payments.js';

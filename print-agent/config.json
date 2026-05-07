@@ -1,0 +1,11 @@
+{
+  "api_url": "https://quickprint-api.YOUR-SUBDOMAIN.workers.dev",
+  "api_token": "PASTE_YOUR_STAFF_JWT_TOKEN_HERE",
+  "poll_interval_ms": 30000,
+  "separator_pages": 1,
+  "auto_print": false,
+  "printer_a4": "",
+  "printer_a3": "",
+  "download_dir": "./downloads",
+  "log_file": "./agent.log"
+}
