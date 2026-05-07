@@ -179,7 +179,7 @@ function renderApp(user) {
               <div class="sidebar-user-name">${user.name}</div>
               <div class="sidebar-user-email">${user.email}</div>
             </div>
-            <button class="sidebar-logout" title="Logout" onclick="doLogout()">🚪</button>
+            <button class="sidebar-logout" onclick="doLogout()">🚪 Logout</button>
           </div>
         </div>
       </aside>
@@ -199,6 +199,7 @@ function renderApp(user) {
   };
 
   window.doLogout = () => {
+    if (!confirm("Are you sure you want to log out?")) return;
     window.api.clearAuth();
     localStorage.removeItem('qp_user');
     renderAuth();

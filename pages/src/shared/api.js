@@ -41,9 +41,14 @@ class ApiClient {
     const data = await res.json().catch(() => ({ error: 'Invalid response' }));
 
     if (res.status === 401) {
-      this.clearAuth();
-      window.location.href = window.location.pathname.includes('admin') ? '/admin.html' : '/index.html';
-      throw new Error('Session expired');
+      // Don't redirect if this IS the login/auth request itself
+      if (!path.startsWith('/auth')) {
+        this.clearAuth();
+        window.location.href = window.location.pathname.includes('admin')
+          ? '/admin.html'
+          : '/index.html';
+      }
+      throw new Error(data.error || 'Session expired');  // show real server error
     }
 
     if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);

@@ -22,7 +22,6 @@ INSERT OR IGNORE INTO settings (key, value) VALUES
   ('gst_percent', '18'),
   ('gst_number', 'GSTIN000000000');
 
--- Admin user (password: admin123 - change in production!)
--- password_hash is bcrypt of "admin123"
+  -- Admin user (password: admin123 - change in production!)
 INSERT OR IGNORE INTO users (name, email, phone, password_hash, role) VALUES
-  ('Super Admin', 'admin@quickprint.in', '9000000000', '$2b$10$YourHashedPasswordHere', 'admin');
+  ('Super Admin', 'admin@quickprint.in', '9000000000', 'sbmgPnB83FXjKN8kkPAlc3EHO5lSEqWw4SgnFFqm5Ug=', 'admin');

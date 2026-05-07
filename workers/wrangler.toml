@@ -4,19 +4,17 @@ compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 [vars]
-RAZORPAY_KEY_ID = "rzp_test_YOUR_KEY_ID"
+RAZORPAY_KEY_ID = "rzp_test_SmNBeCoDJbdipF"
 ENVIRONMENT = "production"
 CORS_ORIGIN = "https://quickprint.pages.dev"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "quickprint-db"
-database_id = "YOUR_D1_DATABASE_ID"
+database_id = " 16932115-6105-4034-895f-159c93a7f0a4"
+migrations_dir = "../migrations"
 
 [[r2_buckets]]
-binding = "FILES"
+binding = "quickprint_files"
 bucket_name = "quickprint-files"
 
-[[migrations]]
-database = "quickprint-db"
-migrations_dir = "../migrations"
